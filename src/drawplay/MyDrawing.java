@@ -15,10 +15,19 @@ public class MyDrawing extends JPanel {
 	// paintComponent is called automatically when the frame needs
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
-		int x = -500;
-		int y = -200;
-		
-		cat.draw(g, x, y);
+		int x = 0;
+		int y = 0;
+		//Prints a 10 x 10 matrix of green heads, the customer wanted something different
+		for(int i=0; i < 10; i++){
+
+			for(int j=0; j < 10; j++) {
+				cat.draw(g, x, y);
+
+				x += 100;
+			}
+			y += 100; // add 100 to y for a new level of CATS 
+			x = 0; // reset x to zero 
+		}
 	}
 
 	/**
